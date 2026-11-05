@@ -1,15 +1,16 @@
-# Carnegie Mellon Web Markdown
+# Carnegie Mellon Web Jekyll Theme
 
-Plain Markdown on GitHub Pages, in CMU style: Carnegie Mellon's web template,
-with the [Carnegie Mellon Web Kit](https://cmu-web.github.io/cmu-web-kit/).
-Write your docs the way you already do; they come out looking like cmu.edu.
+GitHub Pages sites in CMU style: Carnegie Mellon's web template, with the
+[Carnegie Mellon Web Kit](https://cmu-web.github.io/cmu-web-kit/). Write your
+docs in Markdown the way you already do, and build a home page from the
+template's full-width sections; both come out looking like cmu.edu.
 
 ## Use It
 
 In your repository's `_config.yml`, name the theme and your site:
 
 ```yaml
-remote_theme: cmu-web/cmu-web-markdown
+remote_theme: cmu-web/cmu-web-jekyll
 title: Your Office or Project
 description: A line under the name
 ```

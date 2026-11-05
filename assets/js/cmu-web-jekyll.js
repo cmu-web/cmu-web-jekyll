@@ -1,4 +1,4 @@
-/* Carnegie Mellon Web Markdown: turn what Markdown writes into the Carnegie Mellon Web Kit's
+/* Carnegie Mellon Web Jekyll Theme: turn what Markdown writes into the Carnegie Mellon Web Kit's
    components. Runs after the template's scripts and the kit's cmu-app.js. */
 (function () {
   "use strict";
