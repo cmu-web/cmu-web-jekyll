@@ -3,12 +3,12 @@
   with the Carnegie Mellon Web Kit. Settings, all optional, in _config.yml:
     title        the site's name, in the header and footer
     description  a line under the name
-    cmu.roof     red (default), gray, or white
+    cmu.roof     red (default), gray or white
     cmu.kit      the web kit version to load
     cmu.nav      the pages in the navigation, in order, by file name; without
                  it, every page with a title, by nav_order in its front matter
     cmu.footer   office (defaults to title), address (a list of lines),
-                 phone, email (a Contact Us link), and links (title and url)
+                 phone, email (a Contact Us link) and links (title and url)
 {%- endcomment -%}
 {%- assign cmu = site.cmu -%}
 {%- assign kit = cmu.kit | default: "main" -%}

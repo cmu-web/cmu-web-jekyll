@@ -75,8 +75,8 @@ Tables are striped and fill the page's width.
 | ------------- | ---------------------------------------- | ---------- |
 | `title`       | Your site's name, in the header and footer | Required |
 | `description` | A line under the name                    | None       |
-| `cmu.roof`    | The strip across the top: `red`, `gray`, or `white` | `red` |
-| `cmu.footer`  | The footer's office, address, phone, email, and links | `title` and CMU's address |
+| `cmu.roof`    | The strip across the top: `red`, `gray` or `white` | `red` |
+| `cmu.footer`  | The footer's office, address, phone, email and links | `title` and CMU's address |
 | `cmu.nav`     | The pages in the navigation, in order    | Every page with a title |
 | `cmu.kit`     | The web kit version to load              | `main`     |
 
