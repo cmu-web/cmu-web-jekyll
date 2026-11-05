@@ -1,0 +1,26 @@
+{%- comment -%}
+  Reads the site's settings for the other includes. Every layout includes it first.
+{%- endcomment -%}
+{%- assign cmu = site.cmu -%}
+{%- assign kit = cmu.kit | default: "main" -%}
+{%- assign kitcdn = "https://cdn.jsdelivr.net/gh/cmu-web/cmu-web-kit@" | append: kit -%}
+{%- assign tpl = "https://www.cmu.edu/common/standard-v6" -%}
+{%- assign roof = "red invert" -%}
+{%- if cmu.roof == "gray" or cmu.roof == "grey" -%}{%- assign roof = "darkgrey invert" -%}{%- elsif cmu.roof == "white" -%}{%- assign roof = "" -%}{%- endif -%}
+{%- assign home = false -%}{%- if page.url == "/" or page.url == "/index.html" -%}{%- assign home = true -%}{%- endif -%}
+{%- if cmu.nav -%}
+  {%- assign navpages = "" | split: "" -%}
+  {%- for name in cmu.nav -%}
+    {%- assign found = site.html_pages | where: "path", name | first -%}
+    {%- if found -%}{%- assign navpages = navpages | push: found -%}{%- endif -%}
+  {%- endfor -%}
+{%- else -%}
+  {%- assign listed = site.html_pages | where_exp: "p", "p.title" | where_exp: "p", "p.nav_exclude != true" | where_exp: "p", "p.url != '/'" | where_exp: "p", "p.url != '/index.html'" -%}
+  {%- comment -%} Pages with a nav_order first, in that order; then the rest, by title {%- endcomment -%}
+  {%- assign ordered = listed | where_exp: "p", "p.nav_order" | sort: "nav_order" -%}
+  {%- assign rest = listed | where_exp: "p", "p.nav_order == nil" | sort: "title" -%}
+  {%- assign navpages = ordered | concat: rest -%}
+{%- endif -%}
+{%- assign footer = cmu.footer -%}
+{%- assign office = footer.office | default: cmu.office | default: site.title -%}
+{%- if footer.address -%}{%- assign address = footer.address -%}{%- else -%}{%- assign address = "Carnegie Mellon University|5000 Forbes Avenue|Pittsburgh, PA 15213" | split: "|" -%}{%- endif -%}

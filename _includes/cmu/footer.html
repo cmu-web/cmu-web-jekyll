@@ -1,0 +1,24 @@
+  <footer class="grid column3 invert">
+    <div>
+      <p>{{ office }}<br>{{ address | join: "<br>" }}{% if footer.phone %}<br>{{ footer.phone }}{% endif %}{% if footer.email %}<br><a href="mailto:{{ footer.email }}">Contact Us</a>{% endif %}</p>
+      <ul>{% for l in footer.links %}<li><a href="{{ l.url }}">{{ l.title }}</a></li>{% endfor %}<li><a href="https://www.cmu.edu/legal/">Legal Info</a></li><li><a href="https://www.cmu.edu/">www.cmu.edu</a></li></ul>
+      <ul><li>&copy; {{ site.time | date: "%Y" }} Carnegie Mellon University</li></ul>
+    </div>
+    <div></div>
+    <div>
+      <nav id="nav">
+        <ul>
+          {%- for p in navpages %}
+          {%- if p.url == page.url %}
+          <li class="active"><a href="{{ p.url | relative_url }}" aria-current="page">{{ p.title }}</a></li>
+          {%- else %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
+          {%- endif %}
+          {%- endfor %}
+          {%- if site.github.repository_url %}
+          <li class="secondary"><a class="external" href="{{ site.github.repository_url }}">{{ site.title }} on GitHub</a></li>
+          {%- endif %}
+        </ul>
+      </nav>
+    </div>
+  </footer>
