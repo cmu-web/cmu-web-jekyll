@@ -1,0 +1,24 @@
+{%- comment -%}
+  A full-width page: the same header and footer as the default layout, with the page's own
+  template sections (heroes, color bands, grids, a content area with a sidebar) placed straight
+  into #content instead of one column. Write the page in HTML. Front matter, all optional:
+    breadcrumbs  false to leave them off; the home page never has them
+    carousel     true to load the template's carousel script, for a js-flickityCustom section
+{%- endcomment -%}
+{%- include cmu/settings.html -%}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+{% include cmu/head.html -%}
+<body class="no-js">
+<div id="container">
+{% include cmu/header.html %}
+  <main id="content">
+{%- unless page.breadcrumbs == false %}{% include cmu/breadcrumbs.html %}{% endunless %}
+{{ content }}
+  </main>
+
+{% include cmu/footer.html -%}
+</div>
+{% include cmu/scripts.html -%}
+</body>
+</html>

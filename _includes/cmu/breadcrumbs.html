@@ -1,5 +1,8 @@
     {%- unless home %}
     <div class="breadcrumbs">
+      {%- if parent.url %}
+      <a href="{{ parent.url }}">{{ parent.title }}</a>&nbsp;&rsaquo;&nbsp;
+      {%- endif -%}
       <a href="{{ '/' | relative_url }}">{{ site.title }}</a>&nbsp;&rsaquo;&nbsp;{{ page.title }}
     </div>
     {%- endunless %}

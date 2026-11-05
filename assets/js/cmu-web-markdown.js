@@ -2,11 +2,13 @@
    components. Runs after the template's scripts and the kit's cmu-app.js. */
 (function () {
   "use strict";
-  var content = document.querySelector("#content .content");
+  // The whole page, so it works in every layout; what a page writes as kit components already
+  // is left alone
+  var content = document.getElementById("content");
   if (!content) return;
 
   // Code blocks: a kit code block with a copy icon in its corner
-  content.querySelectorAll("pre").forEach(function (pre, i) {
+  content.querySelectorAll("pre:not(.cmu-snippet)").forEach(function (pre, i) {
     var code = pre.querySelector("code") || pre;
     var box = document.createElement("div");
     box.className = "cmu-copyable";

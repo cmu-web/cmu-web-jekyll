@@ -9,5 +9,5 @@ cmu:
     links:
       - title: Carnegie Mellon Web Kit
         url: https://cmu-web.github.io/cmu-web-kit/
-  kit: main
+  kit: 0.1.0
 exclude: [vendor, Gemfile, Gemfile.lock]

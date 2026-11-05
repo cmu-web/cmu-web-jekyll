@@ -47,6 +47,27 @@ cmu:
   nav: [writing.md, setup.md, faq.md]
 ```
 
+To list other sites after your pages, such as a channel or a related site,
+add them as `nav_links`. They appear as external links, above the link to
+your repository:
+
+```yaml
+cmu:
+  nav_links:
+    - title: Your Office on YouTube
+      url: https://www.youtube.com/@your-office
+```
+
+If your site belongs to a larger office, name it as the `parent`. It comes
+first in the breadcrumbs, and the line under your site's name links to it:
+
+```yaml
+cmu:
+  parent:
+    title: Your Department
+    url: https://www.cmu.edu/your-department/
+```
+
 ## Footer
 
 The footer starts with your office's name and Carnegie Mellon's address. Set
@@ -78,7 +99,9 @@ Tables are striped and fill the page's width.
 | `cmu.roof`    | The strip across the top: `red`, `gray` or `white` | `red` |
 | `cmu.footer`  | The footer's office, address, phone, email and links | `title` and CMU's address |
 | `cmu.nav`     | The pages in the navigation, in order    | Every page with a title |
-| `cmu.kit`     | The web kit version to load              | `main`     |
+| `cmu.nav_links` | Other sites, after the pages in the navigation | None |
+| `cmu.parent`  | The office your site belongs to, first in the breadcrumbs | None |
+| `cmu.kit`     | The web kit release to load              | `0.1.0`    |
 
 ## Code
 
@@ -111,3 +134,31 @@ GitHub's alert syntax becomes a labeled callout:
 Any other block quote becomes a plain note.
 
 > This is a note: a quiet aside among the other content.
+
+## Full-Width Pages
+
+Markdown pages go in one column. For a page with full-width sections, such
+as a home page with a hero, color bands and cards, or a page with a sidebar,
+use the `sections` layout and write the page in HTML with the template's
+sections and the kit's components. It keeps your site's header, navigation
+and footer:
+
+```html
+---
+layout: sections
+title: Borrow a Camera
+description: Reserve a camera in about a minute.
+---
+<div class="content">
+  <div>
+    <h1>Borrow a Camera</h1>
+    <p class="cmu-lead">Reserve one in about a minute.</p>
+  </div>
+</div>
+```
+
+The [example page](example.html) shows a few sections together. In the
+front matter, `breadcrumbs: false` leaves the breadcrumbs off, and
+`carousel: true` loads the template's slideshow script for a
+`js-flickityCustom` section. On any page, a `description` becomes what
+search engines show.

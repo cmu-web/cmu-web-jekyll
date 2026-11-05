@@ -2,13 +2,13 @@
     <div class="roof {{ roof }}">
       <div>
         <a class="wordmark" href="https://www.cmu.edu/">Carnegie Mellon University</a>
-        <button aria-label="toggle menu" aria-pressed="false" class="menu-btn" href="#nav"><b>&#8212;</b><b>&#8212;</b><b>&#8212;</b></button>
+        <button type="button" aria-label="toggle menu" aria-pressed="false" class="menu-btn" href="#nav"><b>&#8212;</b><b>&#8212;</b><b>&#8212;</b></button>
       </div>
     </div>
     <div id="sitename">
       <span class="sitetitle"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></span>
       {%- if site.description %}
-      <h2>{{ site.description }}</h2>
+      <h2>{% if parent.url %}<a href="{{ parent.url }}">{{ site.description }}</a>{% else %}{{ site.description }}{% endif %}</h2>
       {%- endif %}
     </div>
   </header>

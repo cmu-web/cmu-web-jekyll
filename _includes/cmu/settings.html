@@ -2,7 +2,7 @@
   Reads the site's settings for the other includes. Every layout includes it first.
 {%- endcomment -%}
 {%- assign cmu = site.cmu -%}
-{%- assign kit = cmu.kit | default: "main" -%}
+{%- assign kit = cmu.kit | default: "0.1.0" -%}
 {%- assign kitcdn = "https://cdn.jsdelivr.net/gh/cmu-web/cmu-web-kit@" | append: kit -%}
 {%- assign tpl = "https://www.cmu.edu/common/standard-v6" -%}
 {%- assign roof = "red invert" -%}
@@ -21,6 +21,7 @@
   {%- assign rest = listed | where_exp: "p", "p.nav_order == nil" | sort: "title" -%}
   {%- assign navpages = ordered | concat: rest -%}
 {%- endif -%}
+{%- assign parent = cmu.parent -%}
 {%- assign footer = cmu.footer -%}
 {%- assign office = footer.office | default: cmu.office | default: site.title -%}
 {%- if footer.address -%}{%- assign address = footer.address -%}{%- else -%}{%- assign address = "Carnegie Mellon University|5000 Forbes Avenue|Pittsburgh, PA 15213" | split: "|" -%}{%- endif -%}

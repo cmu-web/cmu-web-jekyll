@@ -1,6 +1,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {%- assign summary = page.description | default: site.description %}
+  {%- if summary %}
+  <meta name="description" content="{{ summary | strip_html | escape }}">
+  {%- endif %}
   <title>{% unless home %}{{ page.title }} - {% endunless %}{{ site.title }} - Carnegie Mellon University</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic" rel="stylesheet">
   <link href="{{ tpl }}/css/main.6.7.min.css" media="screen" rel="stylesheet">

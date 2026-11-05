@@ -15,6 +15,9 @@
           <li><a href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
           {%- endif %}
           {%- endfor %}
+          {%- for l in cmu.nav_links %}
+          <li class="secondary"><a class="external" href="{{ l.url }}">{{ l.title }}</a></li>
+          {%- endfor %}
           {%- if site.github.repository_url %}
           <li class="secondary"><a class="external" href="{{ site.github.repository_url }}">{{ site.title }} on GitHub</a></li>
           {%- endif %}
