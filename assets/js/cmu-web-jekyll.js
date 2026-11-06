@@ -1,4 +1,4 @@
-/* Carnegie Mellon Web Jekyll Theme: turn what Markdown writes into the Carnegie Mellon Web Kilt's
+/* Jekyll & Plaid: turn what Markdown writes into the Carnegie Mellon Web Kilt's
    components. Runs after the template's scripts and the kit's cmu-app.js. */
 (function () {
   "use strict";

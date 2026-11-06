@@ -1,13 +1,13 @@
-title: Carnegie Mellon Web Jekyll Theme
-description: Markdown and full-width pages on GitHub Pages, in CMU style
+title: Jekyll & Plaid
+description: A theme with a checkered past
 cmu:
   roof: red
   footer:
     office: Office of the Vice Provost for Teaching and Learning Innovation
     phone: 412-268-0000
-    email: cmu-web-jekyll@example.edu
+    email: jekyll-and-plaid@example.edu
     links:
       - title: Carnegie Mellon Web Kilt
         url: https://webkilt.andrew.cmu.edu/
-  kit: 0.1.0
+  kit: 0.2.0
 exclude: [vendor, Gemfile, Gemfile.lock]

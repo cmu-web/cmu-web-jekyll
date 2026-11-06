@@ -1,6 +1,7 @@
-# Carnegie Mellon Web Jekyll Theme
+# Jekyll & Plaid
 
-GitHub Pages sites in CMU style: Carnegie Mellon's web template, with the
+A theme with a checkered past: GitHub Pages sites in CMU style, built from
+Carnegie Mellon's web template and the
 [Carnegie Mellon Web Kilt](https://webkilt.andrew.cmu.edu/). Write your
 docs in Markdown the way you already do, and build a home page from the
 template's full-width sections; both come out looking like cmu.edu.
@@ -10,7 +11,7 @@ template's full-width sections; both come out looking like cmu.edu.
 In your repository's `_config.yml`, name the theme and your site:
 
 ```yaml
-remote_theme: cmu-web/cmu-web-jekyll
+remote_theme: cmu-web/cmu-web-jekyll-and-plaid
 title: Your Office or Project
 description: A line under the name
 ```
