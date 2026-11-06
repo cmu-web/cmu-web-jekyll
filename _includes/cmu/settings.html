@@ -3,7 +3,7 @@
 {%- endcomment -%}
 {%- assign cmu = site.cmu -%}
 {%- assign kit = cmu.kit | default: "0.1.0" -%}
-{%- assign kitcdn = "https://cdn.jsdelivr.net/gh/cmu-web/cmu-web-kit@" | append: kit -%}
+{%- assign kitcdn = "https://cdn.jsdelivr.net/gh/cmu-web/cmu-web-kilt@" | append: kit -%}
 {%- assign tpl = "https://www.cmu.edu/common/standard-v6" -%}
 {%- assign roof = "red invert" -%}
 {%- if cmu.roof == "gray" or cmu.roof == "grey" -%}{%- assign roof = "darkgrey invert" -%}{%- elsif cmu.roof == "white" -%}{%- assign roof = "" -%}{%- endif -%}

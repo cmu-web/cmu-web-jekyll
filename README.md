@@ -1,7 +1,7 @@
 # Carnegie Mellon Web Jekyll Theme
 
 GitHub Pages sites in CMU style: Carnegie Mellon's web template, with the
-[Carnegie Mellon Web Kit](https://cmu-web.github.io/cmu-web-kit/). Write your
+[Carnegie Mellon Web Kilt](https://webkilt.andrew.cmu.edu/). Write your
 docs in Markdown the way you already do, and build a home page from the
 template's full-width sections; both come out looking like cmu.edu.
 

@@ -7,7 +7,7 @@ cmu:
     phone: 412-268-0000
     email: cmu-web-jekyll@example.edu
     links:
-      - title: Carnegie Mellon Web Kit
-        url: https://cmu-web.github.io/cmu-web-kit/
+      - title: Carnegie Mellon Web Kilt
+        url: https://webkilt.andrew.cmu.edu/
   kit: 0.1.0
 exclude: [vendor, Gemfile, Gemfile.lock]
